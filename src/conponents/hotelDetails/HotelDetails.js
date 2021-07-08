@@ -39,7 +39,10 @@ function HotelDetails() {
               {p}
             </Box>
           ))}
-        <Text className='sub-heading'>Amenities</Text>
+        <Text className='sub-heading'>
+          Amenities &nbsp;
+          <i className='icon fas fa-hotel'></i>
+        </Text>
         <ul className='list'>
           {essentials &&
             essentials.map((e) => (
@@ -48,7 +51,9 @@ function HotelDetails() {
               </li>
             ))}
         </ul>
-        <Text className='sub-heading'>Pricing</Text>
+        <Text className='sub-heading'>
+          Pricing &nbsp;<i className='icon fas fa-hand-holding-usd'></i>
+        </Text>
         <Box className='pricing-section'>
           {prices &&
             prices.map((price) => (

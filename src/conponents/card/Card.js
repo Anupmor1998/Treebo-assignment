@@ -31,9 +31,13 @@ function Card({ hotel }) {
         <Link to={{ pathname: `/hotel/${hotel.id}` }}>
           <Heading className='heading'>{hotel.name}</Heading>
         </Link>
-        <Text className='location'>{`${hotel.locality ? hotel.locality : ''} ${
-          hotel.city
-        }`}</Text>
+        <Text className='location'>
+          <span>
+            <i className='fas fa-map-marker-alt'></i>
+            &nbsp;&nbsp;
+            {hotel.locality ? hotel.locality : ''} {hotel.city}
+          </span>
+        </Text>
         <Spacer />
         <Text className='price'>
           {minPrice !== Infinity ? <span>₹ {minPrice}</span> : 'Sold Out'}
