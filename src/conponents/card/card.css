@@ -18,6 +18,7 @@
   margin-left: 20px;
 }
 .heading {
+  font-family: 'Lato', sans-serif !important;
   font-size: 28px !important;
   margin-top: 5px;
   cursor: pointer;
