@@ -6,12 +6,14 @@ import logo from '../../assets/logo.png';
 
 function NavBar() {
   return (
-    <Link to='/'>
-      <Box className='navbar'>
+    <Box className='navbar'>
+      <Link to='/'>
         <Image className='logo' src={logo} />
+      </Link>
+      <Link to='/'>
         <Text className='title'>Treebo Hotels</Text>
-      </Box>
-    </Link>
+      </Link>
+    </Box>
   );
 }
 
