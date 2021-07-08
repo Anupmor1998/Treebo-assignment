@@ -6,9 +6,9 @@ import { createContext } from 'react';
 export const hotelContext = createContext();
 
 function ContextProvider({ children }) {
-  const listUrl = 'http://www.mocky.io/v2/5a7f23442e00005000b56873';
-  const priceUrl = 'http://www.mocky.io/v2/5a7f24f02e00005200b56875';
-  const detailsUrl = 'http://www.mocky.io/v2/5a7f265b2e00005d00b56877';
+  const listUrl = 'https://www.mocky.io/v2/5a7f23442e00005000b56873';
+  const priceUrl = 'https://www.mocky.io/v2/5a7f24f02e00005200b56875';
+  const detailsUrl = 'https://www.mocky.io/v2/5a7f265b2e00005d00b56877';
 
   const [hotelList, setHotelList] = useState();
   const [hotelPriceList, setHotelPriceList] = useState();
