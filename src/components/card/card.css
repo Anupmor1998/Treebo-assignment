@@ -8,11 +8,9 @@
 }
 .hotel-image {
   border-radius: 8px;
-  width: 200px;
+  width: 150px;
   height: 150px;
-}
-.img-link {
-  align-self: center !important;
+  align-self: center;
 }
 .hotel-info {
   display: flex;
