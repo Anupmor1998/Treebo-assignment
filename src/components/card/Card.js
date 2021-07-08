@@ -20,12 +20,12 @@ function Card({ hotel }) {
 
   return (
     <Box className='card'>
-      <Link className='img-link' to={{ pathname: `/hotel/${hotel.id}` }}>
-        <Image
-          className='hotel-image'
-          src='https://ik.imagekit.io/anupmor302/valeriia-bugaiova-_pPHgeHz1uk-unsplash_A6DRS9Tgs.jpg'
-        />
-      </Link>
+      {/* <Link className='img-link' to={{ pathname: `/hotel/${hotel.id}` }}> */}
+      <Image
+        className='hotel-image'
+        src='https://ik.imagekit.io/anupmor302/valeriia-bugaiova-_pPHgeHz1uk-unsplash_A6DRS9Tgs.jpg'
+      />
+      {/* </Link> */}
       <Box className='hotel-info'>
         <Link to={{ pathname: `/hotel/${hotel.id}` }}>
           <Heading className='heading'>{hotel.name}</Heading>

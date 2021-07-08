@@ -1,8 +1,8 @@
 import './App.css';
-import Home from './conponents/home/Home';
+import Home from './components/home/Home';
 import ContextProvider from './context/Context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HotelDetails from './conponents/hotelDetails/HotelDetails';
+import HotelDetails from './components/hotelDetails/HotelDetails';
 
 function App() {
   return (
