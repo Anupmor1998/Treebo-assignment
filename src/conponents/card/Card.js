@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Image, Spacer, Text } from '@chakra-ui/react';
 import React from 'react';
 import './card.css';
 import { Link } from 'react-router-dom';
@@ -7,9 +7,9 @@ function Card({ hotel }) {
 
   const findMinPrice = (prices) => {
     let low = Number.POSITIVE_INFINITY;
-    if (prices.length === 0) {
-      return 'Sold Out';
-    }
+    // if (prices.length === 0) {
+    //   return 'Sold Out';
+    // }
 
     for (let i = 0; i < prices.length; i++) {
       if (prices[i] < low) {
@@ -22,13 +22,24 @@ function Card({ hotel }) {
   let minPrice = findMinPrice(prices);
 
   return (
-    <Link to={{ pathname: `/hotel/${hotel.id}` }}>
-      <Box className='card'>
-        <Heading fontSize='28px'>{hotel.name}</Heading>
-        <Text>{`${hotel.locality ? hotel.locality : ''} ${hotel.city}`}</Text>
-        <Text>{minPrice}</Text>
+    <Box className='card'>
+      <Image
+        className='hotel-image'
+        src='https://ik.imagekit.io/anupmor302/valeriia-bugaiova-_pPHgeHz1uk-unsplash_A6DRS9Tgs.jpg'
+      />
+      <Box className='hotel-info'>
+        <Link to={{ pathname: `/hotel/${hotel.id}` }}>
+          <Heading className='heading'>{hotel.name}</Heading>
+        </Link>
+        <Text className='location'>{`${hotel.locality ? hotel.locality : ''} ${
+          hotel.city
+        }`}</Text>
+        <Spacer />
+        <Text className='price'>
+          {minPrice !== Infinity ? <span>₹ {minPrice}</span> : 'Sold Out'}
+        </Text>
       </Box>
-    </Link>
+    </Box>
   );
 }
 
