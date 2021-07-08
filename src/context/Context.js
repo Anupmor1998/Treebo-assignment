@@ -55,7 +55,7 @@ function ContextProvider({ children }) {
 
   return (
     <hotelContext.Provider
-      value={{ hotelData: merge, hotelDetails, hotelPriceList }}
+      value={{ hotelData: merge, hotelDetails, hotelPriceList, hotelList }}
     >
       {children}
     </hotelContext.Provider>

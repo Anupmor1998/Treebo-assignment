@@ -8,10 +8,19 @@ import NavBar from '../navbar/NavBar';
 
 function HotelDetails() {
   const { id } = useParams();
-  const { hotelDetails, hotelPriceList } = useContext(hotelContext);
+  const { hotelDetails, hotelPriceList, hotelList } = useContext(hotelContext);
   const policies = hotelDetails ? hotelDetails.policies : null;
   const essentials = hotelDetails ? hotelDetails.essentials : null;
 
+  const hotelTitle = hotelList
+    ? hotelList.filter((ele) => {
+        let hotel;
+        if (ele.id === Number(id)) {
+          hotel = ele;
+        }
+        return hotel;
+      })
+    : null;
   const hotelPrice = hotelPriceList
     ? hotelPriceList.filter((ele) => {
         let price;
@@ -36,6 +45,17 @@ function HotelDetails() {
           />
         </Box>
         <Box className='info-section'>
+          <Box>
+            {hotelTitle &&
+              hotelTitle.map((hotel) => (
+                <Box key={hotel.id}>
+                  <Text className='hotel-title'>{hotel.name}</Text>
+                  <Text className='hotel-city'>
+                    <i className='fas fa-map-marker-alt'></i> &nbsp;{hotel.city}
+                  </Text>
+                </Box>
+              ))}
+          </Box>
           {policies &&
             policies.map((p) => (
               <Box className='policies' key={uuidv4()}>
@@ -46,14 +66,14 @@ function HotelDetails() {
             Amenities &nbsp;
             <i className='icon fas fa-hotel'></i>
           </Text>
-          <ul className='list'>
+          <Box className='essentials'>
             {essentials &&
               essentials.map((e) => (
-                <li className='list-items' key={uuidv4()}>
-                  {e}
-                </li>
+                <Box className='items' key={uuidv4()}>
+                  <Text>{e}</Text>
+                </Box>
               ))}
-          </ul>
+          </Box>
           <Text className='sub-heading'>
             Pricing &nbsp;<i className='icon fas fa-hand-holding-usd'></i>
           </Text>

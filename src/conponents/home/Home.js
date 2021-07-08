@@ -12,7 +12,7 @@ function Home() {
     <Box>
       <NavBar />
       <Box className='home'>
-        <SimpleGrid minChildWidth='370px' spacing='40px'>
+        <SimpleGrid columns={[1, 2, 3]} spacing='40px'>
           {hotelData &&
             hotelData.map((hotel) => <Card key={hotel.id} hotel={hotel} />)}
         </SimpleGrid>

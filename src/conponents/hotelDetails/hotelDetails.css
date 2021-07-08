@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
 }
 
 .img-section {
@@ -35,10 +35,18 @@
 .icon {
   font-size: 16px;
 }
-.list-items {
-  list-style: none;
-  padding: 3px 10px;
-  font-size: 15px;
+.essentials {
+  display: flex;
+}
+.items {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px #29b550;
+  border-radius: 8px;
+  width: 90px;
+  color: gray;
 }
 .pricing-section {
   display: flex;
@@ -51,7 +59,6 @@
   box-shadow: 0 0 5px #29b550;
   border-radius: 8px;
   width: 120px;
-  cursor: pointer;
 }
 .room-type {
   font-size: 20px;
@@ -63,4 +70,40 @@
   font-size: 15px;
   font-weight: 700;
   color: gray;
+}
+
+.hotel-title {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.hotel-city {
+  font-size: 14px;
+  color: gray;
+}
+@media only screen and (max-width: 767px) {
+  .hotelDetail {
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important;
+  }
+  .img-section {
+    margin-top: 250px;
+    width: 100%;
+  }
+  .img {
+    width: 300px;
+    height: 200px;
+  }
+  .info-section {
+    width: 100%;
+  }
+  .essentials {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .pricing-section {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }

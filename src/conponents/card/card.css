@@ -10,12 +10,15 @@
   border-radius: 8px;
   width: 200px;
   height: 150px;
+}
+.img-link {
   align-self: center !important;
 }
 .hotel-info {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  position: relative;
 }
 .heading {
   font-family: 'Lato', sans-serif !important;
@@ -33,7 +36,20 @@
   color: gray;
 }
 .price {
+  position: absolute;
+  bottom: 0;
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 767px) {
+  .heading {
+    font-size: 25px !important;
+  }
+  .location {
+    font-size: 12px;
+  }
+  .price {
+    font-size: 15px;
+  }
 }
