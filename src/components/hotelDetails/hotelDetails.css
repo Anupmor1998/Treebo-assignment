@@ -101,9 +101,11 @@
   .essentials {
     display: grid;
     grid-template-columns: auto auto auto;
+    justify-content: center;
   }
   .pricing-section {
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: center;
   }
 }

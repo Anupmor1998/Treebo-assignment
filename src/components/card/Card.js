@@ -19,28 +19,29 @@ function Card({ hotel }) {
   let minPrice = findMinPrice(prices);
 
   return (
-    <Box className='card'>
-      <Image
-        className='hotel-image'
-        src='https://ik.imagekit.io/anupmor302/valeriia-bugaiova-_pPHgeHz1uk-unsplash_A6DRS9Tgs.jpg'
-      />
-      <Box className='hotel-info'>
-        <Link to={{ pathname: `/hotel/${hotel.id}` }}>
+    <Link to={{ pathname: `/hotel/${hotel.id}` }}>
+      <Box className='card'>
+        <Image
+          className='hotel-image'
+          src='https://ik.imagekit.io/anupmor302/valeriia-bugaiova-_pPHgeHz1uk-unsplash_A6DRS9Tgs.jpg'
+        />
+        <Box className='hotel-info'>
           <Heading className='heading'>{hotel.name}</Heading>
-        </Link>
-        <Text className='location'>
-          <span>
-            <i className='fas fa-map-marker-alt'></i>
-            &nbsp;&nbsp;
-            {hotel.locality ? hotel.locality : ''} {hotel.city}
-          </span>
-        </Text>
 
-        <Text className='price'>
-          {minPrice !== Infinity ? <span>₹ {minPrice}</span> : 'Sold Out'}
-        </Text>
+          <Text className='location'>
+            <span>
+              <i className='fas fa-map-marker-alt'></i>
+              &nbsp;&nbsp;
+              {hotel.locality ? hotel.locality : ''} {hotel.city}
+            </span>
+          </Text>
+
+          <Text className='price'>
+            {minPrice !== Infinity ? <span>₹ {minPrice}</span> : 'Sold Out'}
+          </Text>
+        </Box>
       </Box>
-    </Box>
+    </Link>
   );
 }
 
