@@ -23,10 +23,23 @@ function HotelDetails() {
     : null;
 
   const prices = hotelPrice && Object.keys(hotelPrice[0].price);
+
   return (
     <Box className='hotelDetail'>
-      {policies && policies.map((p) => <Box key={uuidv4()}>{p}</Box>)}
-      {essentials && essentials.map((e, idx) => <Box key={uuidv4()}>{e}</Box>)}
+      <Box></Box>
+      <Box></Box>
+      {policies &&
+        policies.map((p) => (
+          <Box className='policies' key={uuidv4()}>
+            {p}
+          </Box>
+        ))}
+      {essentials &&
+        essentials.map((e, idx) => (
+          <Box className='' key={uuidv4()}>
+            {e}
+          </Box>
+        ))}
       {prices &&
         prices.map((price) => (
           <Box key={uuidv4()}>

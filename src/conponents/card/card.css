@@ -4,7 +4,6 @@
   background-color: white;
   height: 200px;
   display: flex;
-
   box-shadow: 0 0 3px gray;
 }
 .hotel-image {
@@ -22,6 +21,7 @@
   font-size: 28px !important;
   margin-top: 5px;
   cursor: pointer;
+  font-weight: 900 !important;
 }
 .heading:hover {
   color: green;
@@ -29,9 +29,10 @@
 .location {
   font-size: 14px;
   margin-top: 5px;
+  color: gray;
 }
 .price {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 5px;
 }
