@@ -1,26 +1,17 @@
 .hotelDetail {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: calc(100vh - 70px);
 }
 
 .img-section {
-  display: flex;
   padding: 20px;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 .img {
-  width: 550px;
-  height: 350px;
+  width: 80%;
   border-radius: 8px;
 }
 .info-section {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  width: 100%;
   padding: 20px;
 }
 .policies {
@@ -81,22 +72,19 @@
   font-size: 14px;
   color: gray;
 }
+
 @media only screen and (max-width: 767px) {
-  .hotelDetail {
-    display: flex;
-    flex-direction: column;
-    height: 100vh !important;
+  .hotel-title {
+    text-align: center;
   }
-  .img-section {
-    margin-top: 150px;
-    width: 100%;
+  .hotel-city {
+    text-align: center;
   }
-  .img {
-    width: 300px;
-    height: 200px;
+  .sub-heading {
+    text-align: center;
   }
-  .info-section {
-    width: 100%;
+  .policies {
+    text-align: center;
   }
   .essentials {
     display: grid;
