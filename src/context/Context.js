@@ -13,28 +13,28 @@ function ContextProvider({ children }) {
   const merge = [];
 
   useEffect(() => {
+    const fetchHotels = async () => {
+      const res = await fetch(listUrl);
+      const resJson = await res.json();
+      setHotelList(resJson.data);
+    };
+
+    const fetchHotelsPrice = async () => {
+      const res = await fetch(priceUrl);
+      const resJson = await res.json();
+      setHotelPriceList(resJson.data);
+    };
+
+    const fetchHotelsDetails = async () => {
+      const res = await fetch(detailsUrl);
+      const resJson = await res.json();
+      setHotelDetails(resJson.data);
+    };
+
     fetchHotels();
     fetchHotelsPrice();
     fetchHotelsDetails();
-  }, []);
-
-  const fetchHotels = async () => {
-    const res = await fetch(listUrl);
-    const resJson = await res.json();
-    setHotelList(resJson.data);
-  };
-
-  const fetchHotelsPrice = async () => {
-    const res = await fetch(priceUrl);
-    const resJson = await res.json();
-    setHotelPriceList(resJson.data);
-  };
-
-  const fetchHotelsDetails = async () => {
-    const res = await fetch(detailsUrl);
-    const resJson = await res.json();
-    setHotelDetails(resJson.data);
-  };
+  }, [listUrl, priceUrl, detailsUrl]);
 
   const mergeHotelData = (arr1, arr2) => {
     let start = 0;
