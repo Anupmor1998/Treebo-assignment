@@ -81,11 +81,9 @@ function HotelDetails() {
               <Box className='price-card' key={uuidv4()}>
                 <Text className='room-type'>{price}</Text>
                 <Text className='room-price'>
-                  {hotelPrice[0].price[price] !== null ? (
-                    <span>₹ {hotelPrice[0].price[price]}</span>
-                  ) : (
-                    'Sold Out'
-                  )}
+                  {hotelPrice[0].price[price] !== null
+                    ? `₹ ${hotelPrice[0].price[price]}`
+                    : 'Sold Out'}
                 </Text>
               </Box>
             ))}

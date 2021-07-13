@@ -29,15 +29,13 @@ function Card({ hotel }) {
           <Heading className='heading'>{hotel.name}</Heading>
 
           <Text className='location'>
-            <span>
-              <i className='fas fa-map-marker-alt'></i>
-              &nbsp;&nbsp;
-              {hotel.locality ? hotel.locality : ''} {hotel.city}
-            </span>
+            <i className='fas fa-map-marker-alt'></i>
+            &nbsp;&nbsp;
+            {hotel.locality ? hotel.locality : ''} {hotel.city}
           </Text>
 
           <Text className='price'>
-            {minPrice !== Infinity ? <span>₹ {minPrice}</span> : 'Sold Out'}
+            {minPrice !== Infinity ? `₹ ${minPrice}` : 'Sold Out'}
           </Text>
         </Box>
       </Box>
